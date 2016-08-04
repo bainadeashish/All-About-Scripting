@@ -5,6 +5,6 @@ def homepage(request):
     try:
         context = {'message':'This is homepage'}
         #return HttpResponse(html)
-        return render(request,'homepage.html', context)
+        return render(request,'homepage/homepage.html', context)
     except Exception as e:
         print str(e)
