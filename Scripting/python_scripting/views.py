@@ -13,12 +13,11 @@ def index(request):
     
 def Documents(request):
     try:
-        pdb.set_trace()
         context ={}
-        print os.getcwd()
-        with open("Documents.html") as file:
+        with open("static/Content_management") as file:
             context =dict(enumerate(line.strip() for line in file))
-        return render(request,'python_scripting/Documents.html', context)
+        
+        return render(request,'python_scripting/Documents.html',{'dict':context},context)
     except Exception as e:
         print str(e)
 

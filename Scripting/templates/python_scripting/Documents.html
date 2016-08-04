@@ -5,6 +5,11 @@
 <title>Python Documents</title>
 </head>
 <body>
-<h1> These are documents</h1>
+	{% for key,value in dict.items %}
+	<ul>
+		 <li><a href="/python_scripting/Documents{{ key }}">{{ value }}</a></li>
+	</ul> 	
+	{% endfor %}
+
 </body>
 </html>
